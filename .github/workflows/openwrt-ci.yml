@@ -240,15 +240,10 @@ jobs:
 
       - name: Prepare artifact
         run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
-
-      - name: Upload config.seed
-        uses: actions/upload-artifact@master
-        with:
-          name: config.seed
-          path: ./bin/targets/*/*/config.seed
-
-      - name: Upload firmware
+      - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt_firmware
           path: ./bin/targets/
+ 
+        
